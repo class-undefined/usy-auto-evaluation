@@ -1,15 +1,14 @@
-const keyStr =
-  "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=";
+const keyStr = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/="
 
 export const encodeInp = (input: string) => {
-  let output = "" as string | number;
-  let chr1 = "" as string | number;
-  let chr2 = "" as string | number;
-  let chr3 = "" as string | number;
-  let enc1 = "" as string | number;
-  let enc2 = "" as string | number;
-  let enc3 = "" as string | number;
-  let enc4 = "" as string | number;
+  let output: string | number = ""
+  let chr1: string | number = ""
+  let chr2: string | number = ""
+  let chr3: string | number = ""
+  let enc1: string | number = ""
+  let enc2: string | number = ""
+  let enc3: string | number = ""
+  let enc4: string | number = ""
   let i = 0;
   do {
     chr1 = input.charCodeAt(i++);
@@ -37,7 +36,7 @@ export const encodeInp = (input: string) => {
 };
 export const loadImage = (src: string, timeout: number = 10000) => {
   return new Promise<string>((resolve, reject: (reason: string) => void) => {
-    const img = new Image() as HTMLImageElement | null;
+    const img = new Image()
     if (!img) return;
     img.src = src;
     img.onload = (e) => {

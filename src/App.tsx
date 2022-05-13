@@ -16,7 +16,7 @@ import { Bell, Close, Fire } from "@react-vant/icons";
 
 export default function App() {
   const host = "http://wildsky.cn:4040/";
-  const [data, setData] = useState(null as any);
+  const [data, setData] = useState<any>(null);
   const [userName, setUserName] = useState("");
   const [passWord, setPassword] = useState("");
   const [code, setCode] = useState("");
@@ -71,7 +71,7 @@ export default function App() {
     })
       .then((r) => {
         console.log(r);
-        const { success } = r.data as any;
+        const { success } = r.data;
         if (!success) throw new Error("失败了");
         return loadImage(
           "https://stats.justsong.cn/api/github?username=class-undefined"
