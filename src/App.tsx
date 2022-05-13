@@ -12,7 +12,7 @@ import {
   Notify
 } from "react-vant";
 import "./styles.css";
-import { Bell, Close } from "@react-vant/icons";
+import { Bell, Close, Fire } from "@react-vant/icons";
 
 export default function App() {
   const host = "http://wildsky.cn:4040/";
@@ -148,7 +148,7 @@ export default function App() {
         </Button>
       </Cell.Group>
 
-      {/* <NoticeBar style={{ alignItems: "center" }}>
+      <NoticeBar style={{ alignItems: "center" }}>
         <div
           style={{ width: "100%", justifyContent: "center", display: "flex" }}
         >
@@ -159,7 +159,7 @@ export default function App() {
               alignItems: "center"
             }}
           >
-            <Loading type="ball" />
+            <Fire />
             <div
               style={{
                 display: "flex",
@@ -167,12 +167,20 @@ export default function App() {
                 justifyContent: "center"
               }}
             >
-              正在执行
+              <div>
+                <span>power by: </span>
+                <a
+                  href="https://github.com/class-undefined/"
+                  target="_blank"
+                  style={{ color: "#8452FC" }}
+                >
+                  class-undefined
+                </a>
+              </div>
             </div>
           </div>
         </div>
       </NoticeBar>
-     */}
     </div>
   );
 }
